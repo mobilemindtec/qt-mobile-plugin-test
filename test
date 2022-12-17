@@ -1,0 +1,9 @@
+#!/bin/bash
+
+QT_HOME=/opt/Qt/6.4.0/android_armv7
+export PATH=$QT_HOME/bin:$PATH
+
+$QT_HOME/bin/qmake ANDROID_ABIS="armeabi-v7a"  #x86_64
+make -j$(nproc) apk
+make TESTARGS="-- -o out.xml,xml -o out.txt,txt -o -,tap -vs" check
+
