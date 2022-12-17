@@ -5,4 +5,4 @@ QtMobilePluginTest.pro.user*
 build/
 builds/
 .gradle
-google-service.json
+google-services.json
